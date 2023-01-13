@@ -53,7 +53,7 @@ module RunRun
 
             split = Split.new(unit: Unit::MI, distance: distance)
 
-            assert_equal expected, split.distance_in(unit: Unit::KM)
+            assert_equal expected, split.in_kilometers
         end
 
         def test_distance_in_returns_conversion_when_unit_is_kilometers
@@ -62,7 +62,7 @@ module RunRun
 
             split = Split.new(unit: Unit::KM, distance: distance)
 
-            assert_equal expected, split.distance_in(unit: Unit::MI)
+            assert_equal expected, split.in_miles
         end
 
         def test_unit_returns_miles

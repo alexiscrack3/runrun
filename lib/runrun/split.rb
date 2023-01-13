@@ -13,13 +13,12 @@ module RunRun
             @duration = duration
         end
 
-        def distance_in(unit:)
-            case unit
-            when Unit::KM
-                @distance * 1.60934
-            when Unit::MI
-                @distance * 0.621371
-            end
+        def in_kilometers
+            distance_in(unit: Unit::KM)
+        end
+
+        def in_miles
+            distance_in(unit: Unit::MI)
         end
 
         def pace
@@ -29,6 +28,17 @@ module RunRun
             remainder = pace - minutes
             seconds = (remainder * ActiveSupport::Duration::SECONDS_PER_MINUTE).round
             "#{minutes}:#{format("%02d", seconds)} mins/mi"
+        end
+
+        private
+
+        def distance_in(unit:)
+            case unit
+            when Unit::KM
+                @distance * 1.60934
+            when Unit::MI
+                @distance * 0.621371
+            end
         end
     end
 end
