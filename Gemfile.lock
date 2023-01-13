@@ -1,0 +1,22 @@
+PATH
+  remote: .
+  specs:
+    runrun (0.1.0)
+      minitest (~> 5.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.16.3)
+    rake (13.0.6)
+
+PLATFORMS
+  arm64-darwin-21
+
+DEPENDENCIES
+  minitest (~> 5.0)
+  rake (~> 13.0)
+  runrun!
+
+BUNDLED WITH
+   2.2.3
