@@ -2,7 +2,7 @@
 
 require_relative "runrun/version"
 
-module Runrun
+module RunRun
   class Error < StandardError; end
   # Your code goes here...
   def self.main
